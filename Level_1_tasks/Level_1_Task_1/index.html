@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLVRGC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navlist">
+        <ul>
+            <li><h4>SLVRGC</h4></li>
+            <li><a href="">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+            
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>SILVER GUYS CLUB</h1>
+        <p>A friendly group of non friendly silvers</p>
+        <button><a href="https://steamcommunity.com/groups/silverguysclub">Join us now !</a></button>
+    </div>
+    <div class="content-box">
+        <h1>Our Ranks</h1>
+        <div class="row">
+            <div class="column">
+                <a href="https://i.imgur.com/T6jYPEz.jpg"><img src="css1.jpg" title="CS:GO Silver rank" /></a>
+                
+            </div>
+
+            <div class="column">
+                <a href="https://imgur.com/uc1ODOG"><img src="r6s1.png" title="R6 Silver Rank" /></a>
+                
+            </div>
+
+            <div class="column">
+                <a href="https://imgur.com/v1C9J0u"><img src="valos1.png" title="Valorant SIlver rank" /></a>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="about_us" id="about">
+        <h1>Know more about us</h1>
+        <p>We are bunch of silvers trying to have fun in games. 
+            there is fun. there is rage. and so many emotions. 
+            if you are also one of the silvers that is looking for fun 
+            join us ! . We play games like valorant, CS:GO, R6 etc.
+            not only that but we share out single player games' experiences too.
+        </p>
+    </div>
+
+    <div class="contact_us" id="contact">
+        <h1>Say Hi</h1>
+        <p>We are anti social but anyways... feel free to contact us</p>
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <input type="text" class="input-field" id="name" placeholder="Your Name:-">
+            <input type="email" class="input-field" id="email_id" placeholder="Your Email:-">
+            <input type="text" class="input-field" id="message2" placeholder="Your Message in short:-">
+            <button type="submit">Send!</button>
+        </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail()
+        {
+            Email.send({
+                Host:"smtp.mailtrap.io",
+                Username: "9d938f4e46a297",
+                Password:"0c0ad9749ba90b",
+                To : "sujitgaikwad9511@gmail.com",
+                From : document.getElementById("email_id").value,
+                Subject : "New Response",
+                Body : "Name: " + document.getElementById("name").value + "<br> Email: " +document.getElementById("email_id").value + "<br> Message: " +document.getElementById("message2").value
+            }).then(
+            message => alert("Successfuly Sent via mailtrap service")
+            );
+
+        }
+    </script>
+</body>
+</html>
